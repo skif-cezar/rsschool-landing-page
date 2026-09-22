@@ -7,10 +7,8 @@
 @use 'base/globals';
 
 // 3. Components
-@use 'components/button';
-@use 'components/card';
-@use 'components/menu-item';
-@use 'components/theme-switch';
+@use "../components/menu-item/menu-item";
+@use "../components/theme-switch/theme-switch";
 
 // 4. Layout
 @use 'layout/header';
