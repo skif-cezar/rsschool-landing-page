@@ -1,0 +1,10 @@
+@use 'abstract/variables';
+@use 'abstract/mixins';
+@use 'base/reset';
+@use 'base/globals';
+
+body {
+  font-family: sans-serif;
+  background-color: #E1D4C9;
+  color: #403F3D;
+}

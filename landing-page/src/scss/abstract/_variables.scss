@@ -1,0 +1,61 @@
+:root {
+    // --- Text colors ---
+    --color-text-primary: #403F3D;
+    --color-text-inverse: #E1D4C9;
+    --color-text-accent: #B0907A;
+
+    // --- Dark text colors ---
+    --color-dark-text-primary: #E1D4C9;
+    --color-dark-text-inverse: #E1D4C9;
+    --color-dark-text-accent: #B0907A;
+  
+    // --- Background colors ---
+    --color-bg-page: #E1D4C9;
+    --color-bg-container: #665F55;
+    --color-bg-overlay: #403F3DCC;
+
+    // --- Dark background colors ---
+    --color-dark-bg-page: #292826;
+    --color-dark-bg-container: #403F3D;
+    --color-dark-bg-overlay: #292826CC;
+  
+    // --- Border colors ---
+    --color-borer-primary: #C1B6AD;
+    --color-border-inverse: #665F55;
+
+    // --- Dark border colors ---
+    --color-dark-borer-primary: #665F55;
+    --color-dark-border-inverse: #C1B6AD;
+  
+    // --- Typography ---
+    --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-accent: 'HeadingFont', var(--font-family-base);
+  
+    --font-size-xs: 0.75rem;   // 12px
+    --font-size-sm: 0.875rem;  // 14px
+    --font-size-base: 1rem;    // 16px
+    --font-size-lg: 1.125rem;  // 18px
+    --font-size-xl: 1.25rem;   // 20px
+    --font-size-2xl: 1.5rem;   // 24px
+    --font-size-3xl: 2rem;     // 32px h2
+    --font-size-4xl: 2.625rem;   // 42px h1
+  
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+  
+    --line-height-tight: 1.15;
+    --line-height-snug: 1.25;
+    --line-height-base: 1.5;
+    --line-height-relaxed: 1.75;
+  
+    // --- Shadows ---
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
+    // --- Animations ---
+    --transition-fast: 0.15s ease-in-out;
+    --transition-base: 0.25s ease-in-out;
+  }
