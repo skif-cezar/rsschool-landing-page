@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import injectHTML from 'vite-plugin-html-inject';
 import { resolve } from 'path';
 import autoprefixer from 'autoprefixer';
 
@@ -27,8 +26,5 @@ export default defineConfig({
         main: resolve(__dirname, 'src/index.html')
       }
     }
-  },
-  plugins: [
-    injectHTML(),
-  ],
+  }
 });
