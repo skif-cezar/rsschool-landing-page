@@ -1,7 +1,20 @@
+// 1. Abstract
 @use 'abstract/variables';
 @use 'abstract/mixins';
+
+// 2. Base
 @use 'base/reset';
 @use 'base/globals';
+
+// 3. Components
+@use 'components/button';
+@use 'components/card';
+@use 'components/menu-item';
+
+// 4. Layout
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/footer';
 
 body {
   font-family: sans-serif;
