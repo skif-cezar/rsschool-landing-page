@@ -1,5 +1,12 @@
 @use '../abstract/mixins' as *;
 
+aside,
+footer,
+header,
+nav {
+  display: block;
+}
+
 // Page bounding box
 .container {
   width: 100%;
@@ -22,7 +29,8 @@
   flex: 1 0 auto;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
@@ -32,7 +40,8 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-tight);
@@ -42,7 +51,8 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-base);

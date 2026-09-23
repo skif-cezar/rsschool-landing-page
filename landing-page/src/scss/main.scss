@@ -12,6 +12,7 @@
 @use "../components/tab-item/tab-item";
 
 // 4. Layout
+@use 'layout/layout';
 @use 'layout/header';
 @use 'layout/hero';
 @use 'layout/footer';

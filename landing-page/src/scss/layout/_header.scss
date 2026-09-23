@@ -1,0 +1,37 @@
+@use "..\\abstract\\_mixins.scss" as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: header;
+    margin: 20px auto 0;
+    padding: 0 40px;
+    position: relative;
+    width: 100%;
+
+    &__logo {
+        &>a {
+            display: block;
+            width: 100px;
+            height: 60px;
+            background-image: url('/assets/images/content/logo.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 0;
+            color: transparent;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        column-gap: 40px;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+    }
+}

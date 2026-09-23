@@ -1,0 +1,14 @@
+
+.layout-wrapper {
+    grid-gap: 0 0;
+    display: grid;
+    gap: 0 0;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 1fr auto;
+    margin: 0 auto;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
