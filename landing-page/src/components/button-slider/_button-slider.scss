@@ -1,0 +1,80 @@
+.slider_button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--color-bg-container);
+    border-radius: 50%;
+    cursor: pointer;
+
+    --arrow-color: var(--color-dark-bg-container);
+
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+    }
+
+    &::before {
+        width: 14px;
+        height: 1px;
+        background-color: var(--arrow-color);
+        border-radius: 1px;
+        transition: background-color 0.3s ease;
+    }
+
+    &::after {
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid var(--arrow-color);
+        border-right: 1px solid var(--arrow-color);
+        border-top-right-radius: 1px;
+        transition: border-color 0.3s ease;
+    }
+
+    &::before {
+        left: 22px;
+    }
+
+    &::after {
+        transform: rotate(45deg);
+        right: 23px;
+    }
+
+    &--prev {
+        &::before {
+            left: auto;
+            right: 22px;
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+            right: auto;
+            left: 23px;
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-bg-container);
+        border-color: var(--color-bg-container);
+        --arrow-color: var(--color-bg-page);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+        --arrow-color: #C1B6AD;
+        border-color: #C1B6AD;
+    }
+}

@@ -1,0 +1,67 @@
+.favorite {
+    &__title {
+        margin-top: 100px;
+        text-align: center;
+        font-weight: var(--font-weight-semibold);
+        font-size: 3.75rem;
+        line-height: var(--line-height-snug);
+        color: var(--color-text-primary);
+
+        &>span {
+            font-style: italic;
+            color: var(--color-text-accent);
+        }
+    }
+
+    &__container {
+        margin-top: 40px;
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.slide {
+    &__content {
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__title {
+        font-size: var(--font-size-2xl);
+        color: var(--color-text-primary);
+        line-height: var(--line-height-snug);
+    }
+
+    &__description {
+        margin-top: 16px;
+        text-align: center;
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-regular);
+        color: var(--color-text-primary);
+        line-height: var(--line-height-base);
+    }
+
+    &__price {
+        margin-top: 16px;
+        text-align: center;
+        font-size: var(--font-size-2xl);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-text-primary);
+        line-height: var(--line-height-snug);
+    }
+}
