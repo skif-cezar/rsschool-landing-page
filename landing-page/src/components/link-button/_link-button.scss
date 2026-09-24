@@ -1,3 +1,5 @@
+$cup-icon-path: '/assets/images/icons/coffee-cup.svg';
+
 .link-button {
     display: flex;
     justify-content: center;
@@ -18,28 +20,37 @@
         font-weight: var(--font-weight-semibold);
         line-height: var(--line-height-base);
         color: var(--color-text-primary);
-        transition: padding 0.4s ease, background-color 0.4s ease;
+        text-decoration: none;
+        transition: background-color 0.4s ease;
 
         &::after {
             content: '';
             display: inline-block;
-            width: 0;
+            width: 20px;
             height: 20px;
-            opacity: 0;
+            background-color: currentColor;
+            -webkit-mask-image: url('#{$cup-icon-path}');
+            mask-image: url('#{$cup-icon-path}');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
             margin-left: 0;
-            background-image: url("/assets/images/icons/coffee-cup.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            transition: width 0.35s ease, opacity 0.25s ease, margin-left 0.35s ease;
+            width: 0;
+            opacity: 0;
+            transform: translateX(-5px);
+
+            transition: width 0.35s ease, margin-left 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
         }
 
         &:hover {
-
             &::after {
                 width: 20px;
-                opacity: 1;
                 margin-left: 8px;
+                opacity: 1;
+                transform: translateX(0);
             }
         }
     }

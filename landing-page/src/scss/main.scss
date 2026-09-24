@@ -5,6 +5,7 @@
 // 2. Base
 @use 'base/reset';
 @use 'base/globals';
+@use 'base/theme';
 
 // 3. Components
 @use "../components/menu-item/menu-item";

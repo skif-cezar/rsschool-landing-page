@@ -1,4 +1,5 @@
-@use "..\\..\\scss\\abstract\\_mixins.scss" as *;
+@use "../../scss/abstract/_mixins.scss" as *;
+$cup-icon-path: '../../assets/images/icons/coffee-cup.svg';
 
 .menu-item {
   display: inline-flex;
@@ -8,7 +9,7 @@
   &__link {
     position: relative;
     display: inline-flex;
-    align-items: flex-start;
+    align-items: center;
     column-gap: 8px;
 
     font-size: var(--font-size-base);
@@ -16,6 +17,17 @@
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
     text-decoration: none;
+
+    &--icon-menu::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: currentColor;
+      -webkit-mask: url('#{$cup-icon-path}') no-repeat center / contain;
+      mask: url('#{$cup-icon-path}') no-repeat center / contain;
+      order: 1;
+    }
 
     &::after {
       content: "";
@@ -26,7 +38,6 @@
       width: 0%;
       height: 2px;
       background-color: var(--color-text-primary);
-
       transition: width var(--transition-base, 0.3s) ease-in-out,
         left var(--transition-base, 0.3s) ease-in-out;
       transform: translateX(-50%);
@@ -42,11 +53,5 @@
     &--active::after {
       width: 100%;
     }
-  }
-
-  &__icon {
-    width: var(--font-size-xl);
-    height: var(--font-size-xl);
-    fill: currentColor;
   }
 }

@@ -14,7 +14,7 @@ $facebook-icon-path: '../../assets/images/icons/facebook.svg';
         height: 60px;
         border-radius: 50%;
         background-color: transparent;
-        border: 1px solid var(--color-borer-primary);
+        border: 1px solid var(--color-border-primary);
         transition: background-color 0.3s ease, border-color 0.3s ease;
 
         &::before {
@@ -48,6 +48,7 @@ $facebook-icon-path: '../../assets/images/icons/facebook.svg';
 
         &:hover {
             background-color: var(--color-bg-page);
+            border-color: var(--color-bg-page);
 
             &::before {
                 background-color: var(--color-text-primary);
