@@ -1,0 +1,40 @@
+// 1. Light theme
+:root {
+    // --- Text colors ---
+    --color-text-primary: #403F3D;
+    --color-text-inverse: #E1D4C9;
+    --color-text-accent: #B0907A;
+
+    // --- Background colors ---
+    --color-bg-page: #E1D4C9;
+    --color-bg-container: #665F55;
+    --color-bg-overlay: #403F3DCC;
+
+    // --- Border colors ---
+    --color-border-primary: #C1B6AD;
+    --color-border-inverse: #665F55;
+    --color-border-dark-primary: #665F55;
+
+    // --- Logo image ---
+    --logo-img: url('/assets/images/content/logo.svg');
+}
+
+// 2. Dark theme
+[data-theme="dark"] {
+    // --- Dark text colors ---
+    --color-text-primary: #E1D4C9;
+    --color-text-inverse: #E1D4C9;
+    --color-text-accent: #B0907A;
+
+    // --- Dark background colors ---
+    --color-bg-page: #292826;
+    --color-bg-container: #403F3D;
+    --color-bg-overlay: #292826CC;
+
+    // --- Dark border colors ---
+    --color-border-primary: #665F55;
+    --color-border-inverse: #C1B6AD;
+
+    // --- Logo image ---
+    --logo-img: url('/assets/images/content/logo-dark.svg');
+}

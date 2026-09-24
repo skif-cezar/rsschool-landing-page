@@ -1,0 +1,28 @@
+.offer {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+    &__title {
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-text-primary);
+        line-height: var(--line-height-snug);
+
+        &>em {
+            color: var(--color-text-accent);
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 310px);
+        gap: 40px;
+        justify-content: center;
+        width: 100%;
+    }
+
+}

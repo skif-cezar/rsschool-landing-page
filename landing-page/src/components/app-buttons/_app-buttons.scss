@@ -1,0 +1,70 @@
+$apple-icon-path: '/assets/images/icons/apple-icon.svg';
+$google-play-icon-path: '/assets/images/icons/google-play-icon.svg';
+
+.app-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    width: 200px;
+    height: 64px;
+    padding-left: 20px;
+    border: 1px solid var(--color-border-inverse);
+    border-radius: 9999px;
+    color: var(--color-text-primary);
+
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    user-select: none;
+
+    &__icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        background-color: currentColor;
+        transition: background-color 0.3s ease;
+
+        &.apple-icon {
+            -webkit-mask: url('#{$apple-icon-path}') no-repeat center / contain;
+            mask: url('#{$apple-icon-path}') no-repeat center / contain;
+        }
+
+        &.google-play-icon {
+            -webkit-mask: url('#{$google-play-icon-path}') no-repeat center / contain;
+            mask: url('#{$google-play-icon-path}') no-repeat center / contain;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 2px;
+    }
+
+    &__subtitle,
+    &__title {
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+
+    &__subtitle {
+        font-size: 0.625rem;
+        font-weight: var(--font-weight-semibold);
+        line-height: 140%;
+    }
+
+    &__title {
+        font-size: var(--font-size-base);
+        font-weight: var(--font-weight-semibold);
+        line-height: var(--line-height-base);
+    }
+
+    &:hover {
+        background-color: var(--color-bg-container);
+        color: var(--color-text-inverse);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}

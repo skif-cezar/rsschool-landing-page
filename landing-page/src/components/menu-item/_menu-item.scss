@@ -1,0 +1,54 @@
+@use "../../scss/abstract/_mixins.scss" as *;
+$cup-icon-path: '/assets/images/icons/coffee-cup.svg';
+
+.menu-item {
+  display: inline-flex;
+  height: 28px;
+  align-items: stretch;
+
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    text-decoration: none;
+
+    &--icon-menu::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: currentColor;
+      -webkit-mask: url('#{$cup-icon-path}') no-repeat center / contain;
+      mask: url('#{$cup-icon-path}') no-repeat center / contain;
+      order: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      width: 0%;
+      height: 2px;
+      background-color: var(--color-text-primary);
+      transition: width var(--transition-base, 0.3s) ease-in-out,
+        left var(--transition-base, 0.3s) ease-in-out;
+      transform: translateX(-50%);
+    }
+
+    &:hover,
+    &:focus-visible,
+    &.menu-item__link--active {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
