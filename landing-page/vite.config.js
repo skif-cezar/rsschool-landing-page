@@ -4,6 +4,7 @@ import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   root: resolve(__dirname, 'src'),
+  publicDir: resolve(__dirname, 'public'),
   server: {
     port: 3000,
     open: true
@@ -23,7 +24,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html')
+        main: resolve(__dirname, 'src/index.html'),
+        catalog: resolve(__dirname, 'src/catalog.html')
       }
     }
   }

@@ -12,6 +12,7 @@
 @use "../components/tab-item/tab-item";
 @use "../components/link-button/link-button";
 @use "../components/button-slider/button-slider";
+@use "../components/app-buttons/app-buttons";
 
 // 4. Layout
 @use 'layout/layout';
@@ -19,6 +20,7 @@
 @use 'layout/hero';
 @use 'layout/favorite';
 @use 'layout/about';
+@use 'layout/mobile-app';
 @use 'layout/footer';
 
 body {

@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resource Coffee House</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
@@ -204,8 +208,40 @@
 
         </article>
       </section>
-    </main>
+      <section class="mobile-app">
+        <article class="mobile-app__container">
+          <div class="mobile-app__information">
+            <h2 class="mobile-app__title"><span>Download</span> our app to start ordering</h2>
+            <P class="mobile-app__description">Download the Resource app today and experience the comfort of ordering
+              your favorite coffee from wherever you are</P>
+            <div class="mobile-app__download-buttons">
+              <a href="https://apple.com" class="app-btn" target="_blank" rel="noopener noreferrer"
+                aria-label="Available on the App Store">
+                <span class="app-btn__icon apple-icon" aria-hidden="true"></span>
+                <span class="app-btn__text">
+                  <span class="app-btn__subtitle">Available on the</span>
+                  <span class="app-btn__title">App Store</span>
+                </span>
+              </a>
 
+              <a href="https://play.google.com" class="app-btn" target="_blank" rel="noopener noreferrer"
+                aria-label="Available on Google Play">
+                <span class="app-btn__icon google-play-icon" aria-hidden="true"></span>
+                <span class="app-btn__text">
+                  <span class="app-btn__subtitle">Available on</span>
+                  <span class="app-btn__title">Google Play</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="mobile-app__image">
+            <img src="/assets/images/content/mobile-screens.png"
+              alt="Two phones with the Coffee House app on their screens" draggable="false" class="mobile-app__img"
+              loading="lazy">
+          </div>
+        </article>
+      </section>
+    </main>
     <nav class="tabs" aria-label="Основная навигация">
       <ul class="tabs__list" role="tablist">
         <li class="tabs__item" role="presentation">
