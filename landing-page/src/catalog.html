@@ -97,7 +97,33 @@
 
         </header>
         <main class="container">
+            <nav class="tabs" aria-label="Основная навигация">
+                <ul class="tabs__list" role="tablist">
+                    <li class="tabs__item" role="presentation">
+                        <button type="button" class="tab-item tab-item--active" role="tab" aria-selected="true"
+                            aria-controls="panel-1" id="tab-1">
+                            <span class="tab-item__icon-wrapper">
+                                <img class="tab-item__icon" src="/assets/images/icons/coffee-icon.png" alt=""
+                                    aria-hidden="true" width="16" height="16" />
+                            </span>
 
+                            <span class="tab-item__text">Coffee</span>
+                        </button>
+                    </li>
+
+                    <li class="tabs__item" role="presentation">
+                        <button type="button" class="tab-item" role="tab" aria-selected="false" aria-controls="panel-2"
+                            id="tab-2" tabindex="-1">
+                            <span class="tab-item__icon-wrapper">
+                                <img class="tab-item__icon" src="/assets/images/icons/tea-icon.png" alt=""
+                                    aria-hidden="true" width="16" height="16" />
+                            </span>
+
+                            <span class="tab-item__text">Tea</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
         </main>
         <footer class="footer" id="contact">
             <div class="footer__container">

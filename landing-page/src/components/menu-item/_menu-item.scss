@@ -44,14 +44,11 @@ $cup-icon-path: '../../assets/images/icons/coffee-cup.svg';
     }
 
     &:hover,
-    &:focus-visible {
+    &:focus-visible,
+    &.menu-item__link--active {
       &::after {
         width: 100%;
       }
-    }
-
-    &--active::after {
-      width: 100%;
     }
   }
 }
