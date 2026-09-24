@@ -13,6 +13,7 @@
 @use "../components/link-button/link-button";
 @use "../components/button-slider/button-slider";
 @use "../components/app-buttons/app-buttons";
+@use "../components/social-button/social-button";
 
 // 4. Layout
 @use 'layout/layout';
@@ -24,7 +25,7 @@
 @use 'layout/footer';
 
 body {
-  font-family: sans-serif;
-  background-color: #E1D4C9;
-  color: #403F3D;
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
 }
