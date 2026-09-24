@@ -30,3 +30,9 @@ body {
   background-color: var(--color-bg-page);
   color: var(--color-text-primary);
 }
+
+body,
+.layout-wrapper,
+.container {
+  scroll-behavior: smooth;
+}
