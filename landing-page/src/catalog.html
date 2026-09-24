@@ -97,6 +97,27 @@
 
         </header>
         <main class="container">
+            <article class="product-card">
+                <figure class="product-card__image-wrapper">
+                    <img src="/assets/images/content/coffee-1.jpg"
+                        alt="Irish coffee in a glass topped with whipped milk and cinnamon" class="product-card__image"
+                        loading="lazy">
+                </figure>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">Irish coffee</h3>
+                    <p class="product-card__description">
+                        Fragrant black coffee with Jameson Irish whiskey and whipped milk
+                    </p>
+                    <div class="product-card__footer">
+                        <span class="product-card__price">$7.00</span>
+                    </div>
+                </div>
+            </article>
+
+            <dialog id="product-details">
+                <h2>Детальное описание товара</h2>
+                <button type="button" id="close-modal-btn">Закрыть</button>
+            </dialog>
             <nav class="tabs" aria-label="Основная навигация">
                 <ul class="tabs__list" role="tablist">
                     <li class="tabs__item" role="presentation">
