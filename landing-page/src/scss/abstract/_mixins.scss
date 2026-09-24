@@ -60,3 +60,8 @@ $breakpoints: (
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin active-icon-style {
+  background-color: var(--color-text-accent);
+  color: var(--color-text-inverse);
+}

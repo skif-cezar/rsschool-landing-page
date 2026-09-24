@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <title>Resource Coffee House</title>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const supportDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && supportDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -51,7 +60,7 @@
         <fieldset class="theme-switch" aria-label="Выбор темы оформления">
           <!-- Light theme -->
           <label class="theme-switch__option">
-            <input type="radio" name="theme-choice" value="light" class="theme-switch__input" checked
+            <input type="radio" name="theme-choice" value="light" class="theme-switch__input"
               aria-label="Светлая тема" />
             <span class="theme-switch__icon-wrapper light-theme">
               <!-- icon Sun -->
