@@ -15,7 +15,7 @@
             display: block;
             width: 100px;
             height: 60px;
-            background-image: url('/assets/images/content/logo.png');
+            background-image: var(--logo-img);
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;

@@ -14,6 +14,9 @@
     --color-border-primary: #C1B6AD;
     --color-border-inverse: #665F55;
     --color-border-dark-primary: #665F55;
+
+    // --- Logo image ---
+    --logo-img: url('/assets/images/content/logo.svg');
 }
 
 // 2. Dark theme
@@ -31,4 +34,7 @@
     // --- Dark border colors ---
     --color-border-primary: #665F55;
     --color-border-inverse: #C1B6AD;
+
+    // --- Logo image ---
+    --logo-img: url('/assets/images/content/logo-dark.svg');
 }
