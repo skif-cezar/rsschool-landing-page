@@ -35,3 +35,47 @@
         column-gap: 20px;
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+
+    /* Переход сайдбаров вниз, бургер-меню, уменьшение шрифтов */
+    .mobile-app {
+        &__container {
+            row-gap: 100px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Перевод большинства Grid/Flex колонок в 1 колонку (flex-direction: column) */
+    .mobile-app {
+        &__title {
+            font-size: 3.75rem;
+            letter-spacing: 0px;
+
+        }
+
+        &__container {
+            row-gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    /* Уменьшение padding контейнеров до 16px, компактная типографика */
+    .mobile-app {
+        &__title {
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-snug);
+        }
+
+        &__download-buttons {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+}
