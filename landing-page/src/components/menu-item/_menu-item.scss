@@ -1,5 +1,5 @@
 @use "../../scss/abstract/_mixins.scss" as *;
-$cup-icon-path: '../../assets/images/icons/coffee-cup.svg';
+$cup-icon-path: '/assets/images/icons/coffee-cup.svg';
 
 .menu-item {
   display: inline-flex;
