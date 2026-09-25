@@ -8,7 +8,6 @@
 @use 'base/theme';
 
 // 3. Components
-@use "../components/menu-item/menu-item";
 @use "../components/theme-switch/theme-switch";
 @use "../components/tab-item/tab-item";
 @use "../components/link-button/link-button";
@@ -16,6 +15,7 @@
 @use "../components/app-buttons/app-buttons";
 @use "../components/social-button/social-button";
 @use "../components/product-card/product-card";
+@use "../components/modal/modal";
 
 // 4. Layout
 @use 'layout/layout';

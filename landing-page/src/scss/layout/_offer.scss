@@ -1,3 +1,5 @@
+$refresh-icon-path: '/assets/images/icons/refresh.svg';
+
 .offer {
     display: flex;
     margin-top: 20px;
@@ -25,4 +27,75 @@
         width: 100%;
     }
 
+    &__load-more-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        min-height: 60px;
+        flex-shrink: 0;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 1px solid var(--color-border-inverse);
+        border-radius: 50%;
+        cursor: pointer;
+
+        --arrow-color: var(--color-text-primary);
+        transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            background-color: var(--arrow-color);
+
+            -webkit-mask-image: url($refresh-icon-path);
+            mask-image: url($refresh-icon-path);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+
+            transition: background-color 0.3s ease;
+        }
+
+        &:hover:not(:disabled) {
+            background-color: var(--color-bg-container);
+            border-color: var(--color-bg-container);
+            --arrow-color: var(--color-text-inverse);
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            border-color: #C1B6AD;
+            --arrow-color: #C1B6AD;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .offer {
+        &__title {
+            font-size: 3.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .offer {
+        &__title {
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-snug);
+        }
+    }
 }

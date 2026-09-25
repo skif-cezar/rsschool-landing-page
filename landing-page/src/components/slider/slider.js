@@ -1,10 +1,11 @@
 export const initSlider = () => {
+    const sliderContainer = document.querySelector('.slider');
     const btnNext = document.querySelector('.slider_button--next');
     const btnPrev = document.querySelector('.slider_button--prev');
     const slides = document.querySelectorAll('.slider__slide');
     const indicators = document.querySelectorAll('.slider__indicator');
 
-    if (!slides.length || !btnNext || !btnPrev) {
+    if (!slides.length) {
         return;
     }
 
@@ -30,8 +31,8 @@ export const initSlider = () => {
         activeSlide(index);
     };
 
-    btnNext.addEventListener('click', nextSlide);
-    btnPrev.addEventListener('click', prevSlide);
+    if (btnNext) btnNext.addEventListener('click', nextSlide);
+    if (btnPrev) btnPrev.addEventListener('click', prevSlide);
 
     indicators.forEach((indicator, i) => {
         indicator.addEventListener('click', () => {
@@ -39,4 +40,31 @@ export const initSlider = () => {
             activeSlide(index);
         });
     });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeMinDistance = 40;
+
+    const handleSwipe = () => {
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (swipeDistance < -swipeMinDistance) {
+            nextSlide();
+        }
+        
+        if (swipeDistance > swipeMinDistance) {
+            prevSlide();
+        }
+    };
+
+    if (sliderContainer) {
+        sliderContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].clientX;
+        }, { passive: true });
+
+        sliderContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            handleSwipe();
+        }, { passive: true });
+    }
 };

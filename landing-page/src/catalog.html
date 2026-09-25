@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Resource Coffee House</title>
     <script>
         (function () {
@@ -19,51 +19,53 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="./scss/main.scss">
 </head>
 
 <body>
     <div class="layout-wrapper">
         <header class="header">
             <div class="header__logo">
-                <a href="/">
+                <a href="/" aria-label="Resource Coffee House">
                     Resource Coffee House
                 </a>
             </div>
-            <nav class="header__nav">
-                <ul class="header__menu">
-                    <li class="menu-item">
-                        <a href="index.html#favorite" class="menu-item__link">Favorite coffee</a>
+
+            <nav class="header__nav nav" id="mobile-menu" aria-label="Main menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/#favorite" class="nav__link">Favorite coffee</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#app" class="nav__link">Mobile app</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#contact" class="nav__link">Contact us</a>
                     </li>
 
-                    <li class="menu-item">
-                        <a href="index.html#about" class="menu-item__link">About</a>
+                    <li class="nav__item nav__item--mobile-only">
+                        <a href="catalog.html"
+                            class="nav__link nav__link--icon-menu nav__link--icon nav__link--icon-cup">
+                            <span class="nav__link-text">Menu</span>
+                        </a>
                     </li>
-
-                    <li class="menu-item">
-                        <a href="index.html#app" class="menu-item__link">Mobile app</a>
-                    </li>
-
-                    <li class="menu-item">
-                        <a href="index.html#contact" class="menu-item__link">Contact us</a>
-                    </li>
-
                 </ul>
             </nav>
 
             <div class="header__actions">
-                <fieldset class="theme-switch" aria-label="Выбор темы оформления">
-                    <!-- Light theme -->
+                <fieldset class="theme-switch" aria-label="Choice of theme">
                     <label class="theme-switch__option">
                         <input type="radio" name="theme-choice" value="light" class="theme-switch__input"
-                            aria-label="Светлая тема" />
+                            aria-label="Light theme">
                         <span class="theme-switch__icon-wrapper light-theme">
-                            <!-- icon Sun -->
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -73,12 +75,10 @@
                         </span>
                     </label>
 
-                    <!-- Dark theme -->
                     <label class="theme-switch__option">
                         <input type="radio" name="theme-choice" value="dark" class="theme-switch__input"
-                            aria-label="Темная тема" />
+                            aria-label="Dark theme">
                         <span class="theme-switch__icon-wrapper dark-theme">
-                            <!-- Moon -->
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -88,25 +88,30 @@
                         </span>
                     </label>
                 </fieldset>
-                <div class="menu-item">
-                    <a href="catalog.html" class="menu-item__link menu-item__link--icon-menu">
-                        <span class="menu-item__text">Menu</span>
-                    </a>
-                </div>
-            </div>
 
+                <a href="catalog.html"
+                    class="header__catalog-link nav__link--icon-menu nav__link--icon nav__link--icon-cup">
+                    <span>Menu</span>
+                </a>
+
+                <button type="button" class="burger" aria-label="Открыть меню" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
         </header>
         <main class="container">
             <section class="offer">
                 <h2 class="offer__title">Behind each of our cups hides an <em>amazing surprise</em></h2>
-                <nav class="tabs" aria-label="Основная навигация">
-                    <ul class="tabs__list" role="tablist" aria-label="Категории товаров">
+                <nav class="tabs" aria-label="Main navigation">
+                    <ul class="tabs__list" role="tablist" aria-label="Product category">
                         <li class="tabs__item" role="presentation">
                             <button type="button" class="tab-item tab-item--active" role="tab" aria-selected="true"
-                                aria-controls="panel-1" id="tab-1">
+                                aria-controls="panel-1" id="tab-1" data-category="coffee">
                                 <span class="tab-item__icon-wrapper">
-                                    <img class="tab-item__icon" src="/assets/images/icons/coffee-icon.png" alt=""
-                                        aria-hidden="true" width="16" height="16" />
+                                    <img class="tab-item__icon" src="/assets/images/icons/coffee-icon.png"
+                                        alt="cup of coffee" aria-hidden="true" width="16" height="16" />
                                 </span>
                                 <span class="tab-item__text">Coffee</span>
                             </button>
@@ -114,10 +119,10 @@
 
                         <li class="tabs__item" role="presentation">
                             <button type="button" class="tab-item" role="tab" aria-selected="false"
-                                aria-controls="panel-2" id="tab-2" tabindex="-1">
+                                aria-controls="panel-2" id="tab-2" tabindex="-1" data-category="tea">
                                 <span class="tab-item__icon-wrapper">
-                                    <img class="tab-item__icon" src="/assets/images/icons/tea-icon.png" alt=""
-                                        aria-hidden="true" width="16" height="16" />
+                                    <img class="tab-item__icon" src="/assets/images/icons/tea-icon.png"
+                                        alt=" cup of tea" aria-hidden="true" width="16" height="16" />
                                 </span>
                                 <span class="tab-item__text">Tea</span>
                             </button>
@@ -125,152 +130,63 @@
 
                         <li class="tabs__item" role="presentation">
                             <button type="button" class="tab-item" role="tab" aria-selected="false"
-                                aria-controls="panel-3" id="tab-3" tabindex="-1">
+                                aria-controls="panel-3" id="tab-3" tabindex="-1" data-category="dessert">
                                 <span class="tab-item__icon-wrapper">
-                                    <img class="tab-item__icon" src="/assets/images/icons/dessert-icon.png" alt=""
-                                        aria-hidden="true" width="16" height="16" />
+                                    <img class="tab-item__icon" src="/assets/images/icons/dessert-icon.png"
+                                        alt="dessert" aria-hidden="true" width="16" height="16" />
                                 </span>
                                 <span class="tab-item__text">Dessert</span>
                             </button>
                         </li>
                     </ul>
                 </nav>
-                <div class="offer__container">
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-1.jpg"
-                                alt="Irish coffee in a glass topped with whipped milk and cinnamon"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Irish coffee</h3>
-                            <p class="product-card__description">
-                                Fragrant black coffee with Jameson Irish whiskey and whipped milk
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$7.00</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-2.jpg"
-                                alt="Classic coffee with milk and Kahlua liqueur under a cap of frothed milk"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Kahlua coffee</h3>
-                            <p class="product-card__description">
-                                Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$7.00</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-3.jpg"
-                                alt="Espresso with frothed milk, cream and aromatic honey"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Honey raf</h3>
-                            <p class="product-card__description">
-                                Espresso with frothed milk, cream and aromatic honey
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-4.jpg"
-                                alt="Cappuccino with soft thick foam in summer version with ice"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Ice cappuccino</h3>
-                            <p class="product-card__description">
-                                Cappuccino with soft thick foam in summer version with ice
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.00</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-5.jpg"
-                                alt="Classic black coffee"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Espresso</h3>
-                            <p class="product-card__description">
-                                Classic black coffee
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$4.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-6.jpg"
-                                alt="Espresso coffee with the addition of steamed milk and dense milk foam"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Latte</h3>
-                            <p class="product-card__description">
-                                Espresso coffee with the addition of steamed milk and dense milk foam
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-7.jpg"
-                                alt="Espresso with frothed milk and chocolate"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Latte macchiato</h3>
-                            <p class="product-card__description">
-                                Espresso with frothed milk and chocolate
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-8.jpg"
-                                alt="Fragrant black coffee with cognac and whipped cream"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Coffee with cognac</h3>
-                            <p class="product-card__description">
-                                Fragrant black coffee with cognac and whipped cream
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$6.50</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="offer__container" id="products-container"></div>
+
+                <div class="offer__load-more-wrapper">
+                    <button type="button" class="offer__load-more-btn" id="load-more-btn" style="display: none;">
+                    </button>
                 </div>
             </section>
 
+            <!-- Modal -->
+            <dialog class="modal" id="product-details">
+                <div class="modal__content">
+                    <figure class="modal__image-wrapper">
+                        <img src="" alt="" class="modal__image" id="modal-img">
+                    </figure>
 
-            <dialog id="product-details">
-                <h2>Детальное описание товара</h2>
-                <button type="button" id="close-modal-btn">Закрыть</button>
+                    <div class="modal__info">
+                        <h3 class="modal__title" id="modal-title"></h3>
+                        <p class="modal__description" id="modal-description"></p>
+
+                        <form class="modal__form" method="dialog" id="modal-form">
+                            <fieldset class="modal__group">
+                                <legend class="modal__label">Size</legend>
+                                <div class="modal__options" id="modal-sizes-container">
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="modal__group">
+                                <legend class="modal__label">Additives</legend>
+                                <div class="modal__options" id="modal-additives-container">
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <div class="modal__total">
+                            <span class="modal__total-label">Total:</span>
+                            <span class="modal__total-price" id="modal-total-price">$0.00</span>
+                        </div>
+
+                        <div class="modal__disclaimer">
+                            <span class="modal__disclaimer-icon">i</span>
+                            <p class="modal__disclaimer-text">The total price depends on the selected size and
+                                additives. After adding the item, you can review it in my order.</p>
+                        </div>
+
+                        <button type="button" class="modal__close-btn" id="close-modal-btn">Close</button>
+                    </div>
+                </div>
             </dialog>
         </main>
         <footer class="footer" id="contact">
@@ -317,7 +233,7 @@
                                 </a>
                             </li>
                             <li class="contacts-info__item">
-                                <time datetime="Mo-Sa 09:00-23:00" class="clock">Mon–Sat: 9:00–23:00</time>
+                                <time datetime="09:00/23:00" class="clock">Mon–Sat: 9:00–23:00</time>
                             </li>
                         </ul>
                     </address>

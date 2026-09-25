@@ -21,6 +21,7 @@
 .slider {
     display: flex;
     align-items: center;
+    touch-action: pan-y;
     justify-content: space-between;
 
     &__slide {
@@ -112,5 +113,30 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .favorite {
+        &__title {
+            font-size: 3.75rem;
+        }
+    }
+
+    .slider {
+        justify-content: center;
+    }
+
+    .slider_button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .favorite {
+        &__title {
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-snug);
+        }
     }
 }

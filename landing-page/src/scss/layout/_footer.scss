@@ -125,3 +125,40 @@ $clock-icon-path: '/assets/images/icons/clock.svg';
         transform: scaleX(1);
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        &__container {
+            align-items: flex-start;
+            flex-direction: column;
+            row-gap: 100px;
+            padding: 100px 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        &__container {
+            padding: 60px 24px;
+            row-gap: 40px;
+        }
+
+        &__title {
+            font-size: 3.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        &__container {
+            padding: 60px 16px;
+        }
+
+        &__title {
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-snug);
+        }
+    }
+}

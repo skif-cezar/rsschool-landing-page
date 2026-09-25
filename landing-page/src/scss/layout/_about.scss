@@ -54,19 +54,29 @@
     }
 }
 
-@media (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
     .about {
         &__container {
             flex-direction: column;
-            gap: 20px;
         }
+    }
+}
 
-        &__column {
-            gap: 20px;
+@media screen and (max-width: 768px) {
+    .about {
+        &__title {
+            font-size: 3.75rem;
+            letter-spacing: 0px;
         }
+    }
+}
 
-        &__img-wrapper {
-            height: 380px !important;
+@media screen and (max-width: 576px) {
+    .about {
+        &__title {
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-snug);
         }
     }
 }

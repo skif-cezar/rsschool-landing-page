@@ -6,10 +6,16 @@
     grid-template-columns: 100%;
     grid-template-rows: 80px 1fr auto;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 40px 40px 40px;
     max-width: 1440px;
     min-height: 100vh;
     overflow: hidden;
     position: relative;
     width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .layout-wrapper {
+        padding: 0 16px 40px 16px;
+    }
 }
