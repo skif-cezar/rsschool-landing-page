@@ -1,14 +1,18 @@
 @use "/scss/abstract/mixins" as *;
+$cup-icon-path: '/assets/images/icons/coffee-cup.svg';
+
+body.is-lock {
+    overflow: hidden;
+}
 
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-area: header;
-    margin: 20px auto 0;
-    padding: 0 40px;
-    position: relative;
     width: 100%;
+    margin: 20px auto 0;
+    z-index: 100;
 
     &__logo {
         &>a {
@@ -24,15 +28,105 @@
         }
     }
 
-    &__menu {
-        display: flex;
-        column-gap: 40px;
-    }
-
     &__actions {
         display: flex;
         align-items: center;
         column-gap: 24px;
+    }
+
+    &__catalog-link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+        color: var(--color-text-primary);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-text-primary);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        &--mobile-only {
+            display: none;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-text-primary);
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-text-primary);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        &--icon-cup {
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: currentColor;
+                order: 1;
+                flex-shrink: 0;
+                -webkit-mask: url('#{$cup-icon-path}') no-repeat center / contain;
+                mask: url('#{$cup-icon-path}') no-repeat center / contain;
+            }
+        }
+
+        &--icon-menu {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
     }
 }
 
@@ -50,6 +144,7 @@
     border: 1px solid var(--color-border-inverse);
     border-radius: 50%;
     cursor: pointer;
+    z-index: 101;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 
     &:hover {
@@ -68,54 +163,99 @@
         background-color: var(--color-text-primary);
         border-radius: 2px;
         transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-        .burger.is-active & {
-            &:nth-child(1) {
-                transform: translateY(calc((8px + 2px) / 2)) rotate(45deg);
+    &.is-active {
+        .burger__line:nth-child(1) {
+            transform: translateY(5px) rotate(45deg);
+        }
+
+        .burger__line:nth-child(2) {
+            transform: translateY(-5px) rotate(-45deg);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav__list {
+        column-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header__actions {
+        column-gap: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__catalog-link {
+            display: none;
+        }
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--color-bg-page);
+        padding: 60px 40px;
+        box-sizing: border-box;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        z-index: 99;
+
+        &.is-open {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        &__list {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 60px;
+            height: 100%;
+        }
+
+        &__item {
+            &--mobile-only {
+                display: block;
+                margin-top: 40px;
+            }
+        }
+
+        &__link {
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-snug);
+
+            &--icon-cup::before {
+                width: 40px;
+                height: 40px;
             }
 
-            &:nth-child(2) {
-                transform: translateY(calc(-1 * (8px + 2px) / 2)) rotate(-45deg);
+            &--icon-menu {
+                font-size: var(--font-size-3xl);
+                gap: 16px;
+
+                .nav__link-icon {
+                    width: 32px;
+                    height: 32px;
+                }
             }
         }
     }
 }
 
-/* Стили для показа/скрытия меню */
-/*.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #e5ddd0; // Цвет фона из макета
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-
-    &.is-open {
-        opacity: 1;
-        visibility: visible;
-    }
-}*/
-
-@media screen and (max-width: 1024px) {
-
-    /* Переход сайдбаров вниз, бургер-меню, уменьшение шрифтов */
-    .header {
-        padding: 0;
-
-        &__menu {
-            display: none;
-
-        }
-    }
-
-    .menu-item {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
+@media screen and (max-width: 576px) {
+    .nav {
+        padding: 60px 16px;
     }
 }

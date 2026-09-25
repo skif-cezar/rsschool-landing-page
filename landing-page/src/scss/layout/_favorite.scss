@@ -117,8 +117,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Перевод большинства Grid/Flex колонок в 1 колонку (flex-direction: column) */
     .favorite {
         &__title {
             font-size: 3.75rem;
@@ -135,8 +133,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
-    /* Уменьшение padding контейнеров до 16px, компактная типографика */
     .favorite {
         &__title {
             font-size: var(--font-size-3xl);

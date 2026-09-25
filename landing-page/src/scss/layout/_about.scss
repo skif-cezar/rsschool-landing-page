@@ -56,8 +56,6 @@
 
 
 @media screen and (max-width: 1024px) {
-
-    /* Переход сайдбаров вниз, бургер-меню, уменьшение шрифтов */
     .about {
         &__container {
             flex-direction: column;
@@ -66,23 +64,17 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Перевод большинства Grid/Flex колонок в 1 колонку (flex-direction: column) */
     .about {
         &__title {
             font-size: 3.75rem;
             letter-spacing: 0px;
-
         }
     }
 }
 
 @media screen and (max-width: 576px) {
-
-    /* Уменьшение padding контейнеров до 16px, компактная типографика */
     .about {
         &__title {
-
             font-size: var(--font-size-3xl);
             line-height: var(--line-height-snug);
         }

@@ -127,8 +127,6 @@ $clock-icon-path: '/assets/images/icons/clock.svg';
 }
 
 @media screen and (max-width: 1024px) {
-
-    /* Переход сайдбаров вниз, бургер-меню, уменьшение шрифтов */
     .footer {
         &__container {
             align-items: flex-start;
@@ -140,8 +138,6 @@ $clock-icon-path: '/assets/images/icons/clock.svg';
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Перевод большинства Grid/Flex колонок в 1 колонку (flex-direction: column) */
     .footer {
         &__container {
             padding: 60px 24px;
@@ -155,8 +151,6 @@ $clock-icon-path: '/assets/images/icons/clock.svg';
 }
 
 @media screen and (max-width: 576px) {
-
-    /* Уменьшение padding контейнеров до 16px, компактная типографика */
     .footer {
         &__container {
             padding: 60px 16px;

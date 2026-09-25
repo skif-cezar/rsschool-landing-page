@@ -36,10 +36,7 @@
     }
 }
 
-
-@media screen and (max-width: 1024px) {
-
-    /* Переход сайдбаров вниз, бургер-меню, уменьшение шрифтов */
+@media screen and (max-width: 992px) {
     .mobile-app {
         &__container {
             row-gap: 100px;
@@ -49,8 +46,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Перевод большинства Grid/Flex колонок в 1 колонку (flex-direction: column) */
     .mobile-app {
         &__title {
             font-size: 3.75rem;
@@ -65,8 +60,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
-    /* Уменьшение padding контейнеров до 16px, компактная типографика */
     .mobile-app {
         &__title {
             font-size: var(--font-size-3xl);

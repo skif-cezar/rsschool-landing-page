@@ -53,8 +53,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
-    /* Переход сайдбаров вниз, бургер-меню, уменьшение шрифтов */
     .hero {
         &__container {
             padding-left: 60px;
@@ -64,8 +62,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Перевод большинства Grid/Flex колонок в 1 колонку (flex-direction: column) */
     .hero {
         height: auto;
 
@@ -80,8 +76,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
-    /* Уменьшение padding контейнеров до 16px, компактная типографика */
     .hero {
         &__container {
             padding: 60px 16px;
