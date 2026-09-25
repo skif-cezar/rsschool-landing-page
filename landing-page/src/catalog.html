@@ -104,14 +104,14 @@
         <main class="container">
             <section class="offer">
                 <h2 class="offer__title">Behind each of our cups hides an <em>amazing surprise</em></h2>
-                <nav class="tabs" aria-label="Основная навигация">
-                    <ul class="tabs__list" role="tablist" aria-label="Категории товаров">
+                <nav class="tabs" aria-label="Main navigation">
+                    <ul class="tabs__list" role="tablist" aria-label="Product category">
                         <li class="tabs__item" role="presentation">
                             <button type="button" class="tab-item tab-item--active" role="tab" aria-selected="true"
-                                aria-controls="panel-1" id="tab-1">
+                                aria-controls="panel-1" id="tab-1" data-category="coffee">
                                 <span class="tab-item__icon-wrapper">
-                                    <img class="tab-item__icon" src="/assets/images/icons/coffee-icon.png" alt=""
-                                        aria-hidden="true" width="16" height="16" />
+                                    <img class="tab-item__icon" src="/assets/images/icons/coffee-icon.png"
+                                        alt="cup of coffee" aria-hidden="true" width="16" height="16" />
                                 </span>
                                 <span class="tab-item__text">Coffee</span>
                             </button>
@@ -119,10 +119,10 @@
 
                         <li class="tabs__item" role="presentation">
                             <button type="button" class="tab-item" role="tab" aria-selected="false"
-                                aria-controls="panel-2" id="tab-2" tabindex="-1">
+                                aria-controls="panel-2" id="tab-2" tabindex="-1" data-category="tea">
                                 <span class="tab-item__icon-wrapper">
-                                    <img class="tab-item__icon" src="/assets/images/icons/tea-icon.png" alt=""
-                                        aria-hidden="true" width="16" height="16" />
+                                    <img class="tab-item__icon" src="/assets/images/icons/tea-icon.png"
+                                        alt=" cup of tea" aria-hidden="true" width="16" height="16" />
                                 </span>
                                 <span class="tab-item__text">Tea</span>
                             </button>
@@ -130,144 +130,21 @@
 
                         <li class="tabs__item" role="presentation">
                             <button type="button" class="tab-item" role="tab" aria-selected="false"
-                                aria-controls="panel-3" id="tab-3" tabindex="-1">
+                                aria-controls="panel-3" id="tab-3" tabindex="-1" data-category="dessert">
                                 <span class="tab-item__icon-wrapper">
-                                    <img class="tab-item__icon" src="/assets/images/icons/dessert-icon.png" alt=""
-                                        aria-hidden="true" width="16" height="16" />
+                                    <img class="tab-item__icon" src="/assets/images/icons/dessert-icon.png"
+                                        alt="dessert" aria-hidden="true" width="16" height="16" />
                                 </span>
                                 <span class="tab-item__text">Dessert</span>
                             </button>
                         </li>
                     </ul>
                 </nav>
-                <div class="offer__container">
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-1.jpg"
-                                alt="Irish coffee in a glass topped with whipped milk and cinnamon"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Irish coffee</h3>
-                            <p class="product-card__description">
-                                Fragrant black coffee with Jameson Irish whiskey and whipped milk
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$7.00</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-2.jpg"
-                                alt="Classic coffee with milk and Kahlua liqueur under a cap of frothed milk"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Kahlua coffee</h3>
-                            <p class="product-card__description">
-                                Classic coffee with milk and Kahlua liqueur under a cap of frothed milk
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$7.00</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-3.jpg"
-                                alt="Espresso with frothed milk, cream and aromatic honey" class="product-card__image"
-                                loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Honey raf</h3>
-                            <p class="product-card__description">
-                                Espresso with frothed milk, cream and aromatic honey
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-4.jpg"
-                                alt="Cappuccino with soft thick foam in summer version with ice"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Ice cappuccino</h3>
-                            <p class="product-card__description">
-                                Cappuccino with soft thick foam in summer version with ice
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.00</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-5.jpg" alt="Classic black coffee"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Espresso</h3>
-                            <p class="product-card__description">
-                                Classic black coffee
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$4.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-6.jpg"
-                                alt="Espresso coffee with the addition of steamed milk and dense milk foam"
-                                class="product-card__image" loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Latte</h3>
-                            <p class="product-card__description">
-                                Espresso coffee with the addition of steamed milk and dense milk foam
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-7.jpg"
-                                alt="Espresso with frothed milk and chocolate" class="product-card__image"
-                                loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Latte macchiato</h3>
-                            <p class="product-card__description">
-                                Espresso with frothed milk and chocolate
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$5.50</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <figure class="product-card__image-wrapper">
-                            <img src="/assets/images/content/coffee-8.jpg"
-                                alt="Fragrant black coffee with cognac and whipped cream" class="product-card__image"
-                                loading="lazy">
-                        </figure>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Coffee with cognac</h3>
-                            <p class="product-card__description">
-                                Fragrant black coffee with cognac and whipped cream
-                            </p>
-                            <div class="product-card__footer">
-                                <span class="product-card__price">$6.50</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="offer__container" id="products-container"></div>
+
+                <div class="offer__load-more-wrapper">
+                    <button type="button" class="offer__load-more-btn" id="load-more-btn" style="display: none;">
+                    </button>
                 </div>
             </section>
 
