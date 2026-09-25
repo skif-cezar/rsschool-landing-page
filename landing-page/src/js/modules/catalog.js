@@ -1,5 +1,8 @@
 import productsData from '/data/products.json';
 
+const MOBILE_BREAKPOINT = 768;
+const PRODUCTS_PREVIEW_COUNT = 4;
+
 export const initCatalog = () => {
     const container = document.getElementById('products-container');
     const loadMoreBtn = document.getElementById('load-more-btn');
@@ -38,12 +41,12 @@ export const initCatalog = () => {
   `;
 
     const renderCatalog = () => {
-        const isMobile = window.innerWidth <= 768;
+        const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
         const filteredProducts = productsData.filter(item => item.category === currentCategory);
         let visibleProducts = filteredProducts;
 
         if (isMobile && !isExpanded) {
-            visibleProducts = filteredProducts.slice(0, 4);
+            visibleProducts = filteredProducts.slice(0, PRODUCTS_PREVIEW_COUNT);
         }
 
         container.innerHTML = visibleProducts.map(createCardHTML).join('');
