@@ -148,10 +148,45 @@
                 </div>
             </section>
 
+            <!-- Modal -->
+            <dialog class="modal" id="product-details">
+                <div class="modal__content">
+                    <figure class="modal__image-wrapper">
+                        <img src="" alt="" class="modal__image" id="modal-img">
+                    </figure>
 
-            <dialog id="product-details">
-                <h2>Детальное описание товара</h2>
-                <button type="button" id="close-modal-btn">Закрыть</button>
+                    <div class="modal__info">
+                        <h3 class="modal__title" id="modal-title"></h3>
+                        <p class="modal__description" id="modal-description"></p>
+
+                        <form class="modal__form" method="dialog" id="modal-form">
+                            <fieldset class="modal__group">
+                                <legend class="modal__label">Size</legend>
+                                <div class="modal__options" id="modal-sizes-container">
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="modal__group">
+                                <legend class="modal__label">Additives</legend>
+                                <div class="modal__options" id="modal-additives-container">
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <div class="modal__total">
+                            <span class="modal__total-label">Total:</span>
+                            <span class="modal__total-price" id="modal-total-price">$0.00</span>
+                        </div>
+
+                        <div class="modal__disclaimer">
+                            <span class="modal__disclaimer-icon">i</span>
+                            <p class="modal__disclaimer-text">The total price depends on the selected size and
+                                additives. After adding the item, you can review it in my order.</p>
+                        </div>
+
+                        <button type="button" class="modal__close-btn" id="close-modal-btn">Close</button>
+                    </div>
+                </div>
             </dialog>
         </main>
         <footer class="footer" id="contact">
